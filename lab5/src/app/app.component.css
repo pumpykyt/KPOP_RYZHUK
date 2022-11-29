@@ -1,0 +1,26 @@
+.list{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.container{
+    padding: 100px 300px;
+}
+
+.tags{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.tags h2{
+    font-size: 12px;
+    background-color: gray;
+    padding: 5px 10px;
+    border-radius: 10%;
+}
+
+.btn{
+    background-color: whitesmoke;
+}

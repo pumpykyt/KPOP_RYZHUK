@@ -1,0 +1,11 @@
+<h1>Favourites: </h1>
+<div *ngIf="posts.length > 0" class="grid-cols-4">
+  <div *ngFor="let item of posts">
+    <div class="bg-white rounded shadow-lg p-5 mb-5 bg-blue-300">
+      <h1 class="text-2xl font-bold">{{item.title.toUpperCase()}}</h1>
+      <div>id: {{item.id}}</div>
+      <div>userId: {{item.userId}}</div>
+      <div class="text-lg font-bold">{{item.body}}</div>
+    </div>
+  </div>
+</div>

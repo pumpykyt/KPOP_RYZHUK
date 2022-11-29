@@ -1,0 +1,22 @@
+<app-favourites [posts]="favPosts"></app-favourites>
+
+<div class="container" *ngIf="posts.length > 0">
+  <div class="list">
+    <div *ngFor="let item of posts" >
+      <mat-card>
+        <h1>Title: {{item.title}}</h1>
+        <div class="tags">
+          <h2>Id: {{item.id}}</h2>
+        </div>
+        <button (click)="openModal(item)" class="btn" mat-button color="primary">Details</button>
+        <div class="example-button-container">
+          <div *ngIf="!item.isFav">
+            <button (click)="addFav(item)" mat-fab aria-label="Example icon button with a heart icon">
+              <mat-icon>favorite</mat-icon>
+            </button>
+          </div>
+        </div>
+      </mat-card>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="container mx-auto min-h-screen">
+  <app-favourites></app-favourites>
+  <div *ngIf="posts.length > 0" class="grid-cols-4">s
+    <div *ngFor="let item of posts">
+      <div class="bg-white rounded shadow-lg p-5 mb-5 bg-blue-200">
+        <h1 class="text-2xl font-bold">{{item.title.toUpperCase()}}</h1>
+        <div>id: {{item.id}}</div>
+        <div>userId: {{item.userId}}</div>
+        <div class="text-lg font-bold">{{item.body}}</div>
+        <button (click)="addFavourite(item)" class="rounded px-3 py-1 mt-3 bg-green-500 text-lg text-white font-bold">Add to Favourites</button>
+      </div>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>

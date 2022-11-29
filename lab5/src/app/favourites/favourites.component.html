@@ -1,0 +1,15 @@
+<div class="container" *ngIf="posts.length > 0">
+  <h1>Favourite posts: </h1>
+  <div class="list">
+    <div *ngFor="let item of posts" >
+      <mat-card>
+        <h1>Title: {{item.title}}</h1>
+        <div class="tags">
+          <h2>Id: {{item.id}}</h2>
+          <h2>User id: {{item.userId}}</h2>
+        </div>
+        <h2>Body: {{item.body}}</h2>
+      </mat-card>
+    </div>
+  </div>
+</div>
