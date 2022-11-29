@@ -1,0 +1,8 @@
+<div>
+  <h1>Cума двох чисел</h1>
+  <p>Радіус: <input [(ngModel)]="radius"></p>
+  <p>Довжина окружності: {{2 * 3.14 * radius}}</p>
+  <p>Площа круга: {{3.14 * (radius * radius)}}</p>
+  <p>Об'єм кулі: {{(4/3) * 3.14 * (radius * radius * radius)}}</p>
+</div>
+<router-outlet></router-outlet>
